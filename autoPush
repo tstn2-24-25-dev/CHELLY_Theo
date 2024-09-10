@@ -3,6 +3,6 @@
 git pull
 git status
 git add .
-read -p "nom du commit ?" commit
+read -p "nom du commit ? " commit
 git commit -m "$commit"
 git push origin main
