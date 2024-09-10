@@ -1,17 +1,32 @@
-Scrabble.set = new Map();
-Scrabble.set("a",1);
-Scrabble.set("b",3);
-Scrabble.set("c",3);
-Scrabble.set("d",2);
-Scrabble.set("e",1);
-Scrabble.set("f",4);
-Scrabble.set("g",2);
+const Scrabble = {
+    set: new Map([
+        ['a', 1], ['b', 3], ['c', 3], ['d', 2], ['e', 1], ['f', 4], ['g', 2],
+        ['h', 4], ['i', 1], ['j', 8], ['k', 10], ['l', 1], ['m', 2], ['n', 1],
+        ['o', 1], ['p', 3], ['q', 8], ['r', 1], ['s', 1], ['t', 1], ['u', 1],
+        ['v', 4], ['w', 10], ['x', 10], ['y', 10], ['z', 10]
+    ])
+};
 
-const mot = "bonjour";
-let score = 0;
+function Score() {
+    const motsInput = document.getElementById('mot').value;
+    const mots = motsInput.split(' ').map(mot => mot.trim().toLowerCase());
 
-for (let i = 0; i < mot.length; i++) {
-    score += Scrabble.set(mot[i]);
+    if (mots.length !== 5) {
+        alert('Veuillez entrer 5 mots séparés par des espaces.');
+        return;
+    }
+
+    const motsAvecScores = mots.map(mot => {
+        let score = 0;
+        for (let lettre of mot) {
+            score += Scrabble.set.get(lettre) || 0;
+        }
+        return { mot, score };
+    });
+
+    motsAvecScores.sort((a, b) => a.score - b.score);
+
+    const resultat = motsAvecScores.map(item => `${item.mot} (${item.score})`).join(', ');
+    document.getElementById('score').textContent = 'résultat des mot : ${resultat}';
 }
 
-console.log(score);
