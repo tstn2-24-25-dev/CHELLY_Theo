@@ -17,4 +17,4 @@ letter_scores = {
     'v': random.randint(1, 10), 'w': random.randint(1, 10), 'x': random.randint(1, 10),
     'y': random.randint(1, 10), 'z': random.randint(1, 10)
 }
-print(scrabble("manger"))
+print(scrabble("bonjour"))
