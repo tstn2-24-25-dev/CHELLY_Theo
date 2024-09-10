@@ -21,9 +21,9 @@ function Score() {
         return { mot, score };
     });
 
-    motsAvecScores.sort((a, b) => a.score - b.score);
+    motsAvecScores.sort((a, b) => b.score - a.score);
 
-    const resultat = motsAvecScores.map(item => `${item.mot} (${item.score})`).join(', ');
-    document.getElementById('score').textContent = "résultat des mot : " + resultat;
+    const resultat = motsAvecScores.map(item => `${item.mot} (${item.score})`).join('<br>');
+    document.getElementById('score').innerHTML = "Résultat des mots :" + resultat;
+    console.table(motsAvecScores);
 }
-
