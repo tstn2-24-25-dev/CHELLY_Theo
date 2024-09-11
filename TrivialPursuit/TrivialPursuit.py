@@ -9,8 +9,7 @@ position = 0
 #calcul de la position en fonction des lancés dans le fichier txt
 for lancer in serie:
     position = (position + int(lancer.strip())) % 48
-    couleurJoueur = couleurs[position // 8]
-
+    couleurJoueur = couleurs[position // 8] # sachant qu'il y a 48 couleurs et que c'est 6 couleurs qui se répètent 48/6 = 8
 trivial = couleurJoueur
 
 #Sortie
