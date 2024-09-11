@@ -8,7 +8,7 @@ caractere_numero = {}
 
 
 for i in range(N):
-    longueur = random.randint(4, 8)
+    longueur = random.randint(2, 8)
     caractere = ''.join(random.choice(string.ascii_lowercase) for _ in range(longueur))
     if caractere not in caractere_numero:
         caractere_numero[caractere] = random.randint(1, 100)  
@@ -16,7 +16,7 @@ for i in range(N):
     print(f"{caractere} {numero}")
 
 
-article = {}
+article ={} 
 for caractere, numero in caractere_numero.items():
     if caractere in article:
         article[caractere] += numero
