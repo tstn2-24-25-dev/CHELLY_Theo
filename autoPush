@@ -1,8 +1,8 @@
 #!/bin/bash
 
 git pull
+read -p "nom du commit ? " commit
 git status
 git add .
-read -p "nom du commit ? " commit
 git commit -m "$commit"
 git push origin main
