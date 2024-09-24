@@ -16,7 +16,7 @@ def indice_min(tab, j):
             indice_minimum = i
     return indice_minimum
 
-tableau = [64, 25, 12, 22, 11]
+tableau = [4,8,2,10,1,9,7,6,3,5]
 print("Tableau original:", tableau)
 tri_selection(tableau)
 print("Tableau trié:", tableau)
