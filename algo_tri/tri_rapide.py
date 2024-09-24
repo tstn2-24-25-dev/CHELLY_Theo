@@ -11,6 +11,10 @@ def triPivot(tab, debut, fin):
     return curseur
 
 
+
+
+
+
 # fonction triRapide avec indices
 def triRapide_interne(tab, debut, fin):
     if debut < fin:
@@ -19,10 +23,16 @@ def triRapide_interne(tab, debut, fin):
         triRapide_interne(tab, pivot_index + 1, fin)
 
 
+
+
+
 # triRapide sans indices
-def triRapid(tab):
+def triRapide(tab):
     triRapide_interne(tab, 0, len(tab))
     return tab
+
+
+
 
 
 # test
