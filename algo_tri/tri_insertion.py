@@ -11,9 +11,9 @@ def tri_insertion(tab):
         tab[k + 1] = element_a_inserer
     return tab  
     
-if __name__ == "__main__":
-    print("tableau original: ")
-    tab = [4,8,2,10,1,9,7,6,3,5]
-    print ((tab))
-    print("tableau trié :")
-    print(tri_insertion(tab))
+
+print("tableau original: ")
+tab = [4,8,2,10,1,9,7,6,3,5]
+print ((tab))
+print("tableau trié :")
+print(tri_insertion(tab))
