@@ -1,5 +1,5 @@
 #fonction tri
-def tri(tab, debut, fin):
+def triPivot(tab, debut, fin):
     pivot = tab[fin -1]
     curseur = debut
 
@@ -16,7 +16,7 @@ def tri(tab, debut, fin):
 #tri
 def triRapide(tab, debut, fin):
      if debut < fin:
-            pivot_index = tri(tab, debut, fin)
+            pivot_index = triPivot(tab, debut, fin)
             triRapide(tab , debut, pivot_index)
             triRapide(tab , pivot_index + 1, fin)
 
