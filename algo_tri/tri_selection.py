@@ -1,13 +1,13 @@
 #fonction tri
-def triSelection(l):
-    for i in range(len(l) - 1):
+def triSelection(tab):
+    for i in range(len(tab) - 1):
 # Trouver l'indice du minimum à partir de la position i
         indiceMin = i
-        for j in range(i + 1, len(l)):
-            if l[j] < l[indiceMin]:
+        for j in range(i + 1, len(tab)):
+            if tab[j] < tab[indiceMin]:
                 indiceMin = j
 # Échange l'élément à la position i avec l'élément minimum trouvé
-        l[i], l[indiceMin] = l[indiceMin], l[i]
+        tab[i], tab[indiceMin] = tab[indiceMin], tab[i]
 def indiceMin(tab, j):
     indice_minimum = j
 #trouver l'indice de la plus petite valeur à partir de l'indice j
